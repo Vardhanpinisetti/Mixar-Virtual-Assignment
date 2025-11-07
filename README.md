@@ -51,7 +51,8 @@ Printed statistics and optionally a screenshot or rendered view of the mesh.
 Output Image: 
 
 
-<img width="1920" height="991" alt="outputsoriginal_mesh_view" src="https://github.com/user-attachments/assets/b5804bc6-4cd6-4411-9c0d-4ca98f062616" />
+<img width="1920" height="991" alt="outputsoriginal_mesh_view" src="https://github.com/user-attachments/assets/b0bb9614-91ec-4a9f-9724-f02068b23a32" />
+
 
 
 
@@ -82,11 +83,15 @@ better?
 Output Images: 
 
 
-<img width="1920" height="991" alt="outputsminmax_view" src="https://github.com/user-attachments/assets/d65766e2-cd40-4ecb-b4ca-2c11a108885c" />
+<img width="1920" height="991" alt="outputsminmax_view" src="https://github.com/user-attachments/assets/a79712dc-c21f-4eaa-bcbd-2080ae8fca8c" />
 
 
 
-<img width="1920" height="991" alt="outputsunitsphere_view" src="https://github.com/user-attachments/assets/d4bb73b5-0981-4b67-b728-a7ad77994b35" />
+
+
+<img width="1920" height="991" alt="outputsunitsphere_view" src="https://github.com/user-attachments/assets/79b40225-f4a1-4a7b-bbbe-42d13170279b" />
+
+
 
 
 
@@ -117,22 +122,17 @@ Deliverables:
 Output Images: 
 
 
-<img width="640" height="480" alt="error_minmax" src="https://github.com/user-attachments/assets/c751f494-d68d-41b7-bfbe-6fbd79801e77" />
-
-
-
-<img width="640" height="480" alt="error_unitsphere" src="https://github.com/user-attachments/assets/b370a7dc-9a77-4cbb-800c-5466e6a2e733" />
+<img width="640" height="480" alt="error_minmax" src="https://github.com/user-attachments/assets/3a698f2a-b2fe-4937-bc34-923f7e76a715" />
 
 
 
 
-### ✅ Conclusion ###
+<img width="640" height="480" alt="error_unitsphere" src="https://github.com/user-attachments/assets/a671f532-5e7d-4083-8108-ef46fd9cb959" />
 
-    - The Min–Max normalization produced a **lower reconstruction error (MSE ≈ 0)** compared to the Unit-Sphere method.
-    - Unit-Sphere normalization introduced a small rounding error due to division by the maximum Euclidean distance.
-    - The quantization (1024 bins) preserved geometry well in both cases.
-    - The cube structure remained intact in both reconstructed meshes.
-    - Therefore, **Min–Max normalization + quantization preserves mesh geometry best** for this dataset.
+
+
+
+
 
 
 
