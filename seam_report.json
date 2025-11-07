@@ -1,0 +1,10 @@
+{
+  "mesh": "meshes_original/cube.obj",
+  "n_vertices": 8,
+  "n_faces": 12,
+  "n_seam_edges": 12,
+  "n_chains": 6,
+  "angle_deg": 45.0,
+  "reconstruction_missed_edges": 0,
+  "reconstruction_extra_edges": 0
+}
