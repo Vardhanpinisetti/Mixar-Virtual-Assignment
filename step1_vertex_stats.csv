@@ -1,0 +1,2 @@
+file,n_vertices,xmin,ymin,zmin,xmax,ymax,zmax,x_mean,y_mean,z_mean,x_std,y_std,z_std,bbox_diag
+cube.obj,8,-0.5,-0.5,-0.5,0.5,0.5,0.5,0.0,0.0,0.0,0.5,0.5,0.5,1.7320508075688772
