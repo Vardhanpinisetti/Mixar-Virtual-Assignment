@@ -135,6 +135,83 @@ Output Images:
 
 
 
+### Bonus Task (Optional – 30 Marks) ###
+
+Advanced Mesh Understanding and Research Challenge 
+Choose any one of the following sub-tasks. Each focuses on a deeper concept related to 
+how SeamGPT and similar systems process 3D data. 
+
+
+Option 1: Seam Tokenization Prototype 
+Goal: Prototype how seams of a 3D mesh could be represented as discrete tokens — a step 
+toward SeamGPT-style processing. 
+Steps: 
+1. Identify mesh seams (edges where UV mappings break). 
+2. Propose a token encoding scheme that can represent seam structure sequentially. 
+3. Show a simple example of encoding and decoding seams using your format. 
+Deliverables: 
+● Code or pseudocode for encoding/decoding 
+● Example token sequence 
+● Short explanation (5–10 lines) connecting this idea to mesh understanding 
+
+
+Output Images:
+
+<img width="1120" height="960" alt="seam_overlay" src="https://github.com/user-attachments/assets/a63bbf93-6240-4fa6-9e83-5ba6318e1cb0" />
+
+
+
+Option 2: Rotation and Translation Invariance + Adaptive Quantization 
+Goal: 
+Implement a normalization and quantization pipeline that is robust to mesh transformations 
+and adapts to local geometric density. 
+Steps: 
+1. Generate multiple randomly rotated or translated versions of the same mesh. 
+2. Normalize each version using your method so that results remain consistent across 
+transformations. 
+3. Analyze the vertex distribution and compute local density or variance to determine 
+adaptive quantization bin sizes. 
+4. Quantize the normalized meshes using variable bin sizes — smaller bins in dense 
+areas, larger bins in sparse ones. 
+5. Dequantize and denormalize the meshes to reconstruct the originals. 
+6. Measure and plot reconstruction error across transformed versions and compare 
+against uniform quantization. 
+Deliverables: 
+● Normalized and quantized meshes for different orientations 
+● Error plots (uniform vs. adaptive quantization) 
+● Comparison table showing reconstruction error across methods 
+● Short written analysis discussing: 
+- Invariance of normalization under transformations 
+- Effectiveness of adaptive quantization in reducing information loss
+
+
+Output Images:
+
+<img width="600" height="400" alt="bonus_error_barplot" src="https://github.com/user-attachments/assets/23bd67f7-748d-415f-8b27-3b7e1e7e19cf" />
+
+
+
+
+
+### Conclusion ###
+
+    - A complete 3D mesh preprocessing pipeline was implemented.
+    - Vertex-level statistics were extracted to understand mesh geometry.
+    - Two normalization techniques were tested:
+           * Min–Max Normalization → MSE ≈ 0 (best accuracy)
+           * Unit Sphere Normalization → small rounding error (~1e-6)
+    - 1024-bin quantization preserved overall mesh structure effectively.
+    - Bonus Option 1: Successfully detected and tokenized mesh seam boundaries → produced symbolic seam chains.
+    - Bonus Option 2: Compared Uniform vs Adaptive Quantization:
+            * Uniform is consistent,
+            * Adaptive performs better where vertex density varies.
+    - The mesh remained visually accurate across all reconstruction steps.
+
+### Final Insight ###
+
+Min–Max + Quantization gives highest reconstruction accuracy, while
+Unit Sphere + Adaptive Quantization is better when scale and geometry vary.
+
 
 
 
